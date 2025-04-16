@@ -11,38 +11,38 @@ if (window.Worker) {
 		if(typeof(myWorker1) == "undefined") {
 			console.log("Starting wroker1");
 			myWorker1 = new Worker("js/worker1.js");
+			// Recieve Web Worker message
+			myWorker1.onmessage = function(event) {
+				console.log(`Message from the wroker: ${event.data}`);
+				resultText.innerHTML = event.data;
+			};
+			// Print in case of an error occurs 
+			myWorker1.onerror = function(error) {
+				const workerError = `Error Worker1: ${error.message}`;
+				console.log(workerError);
+				resultText.innerHTML = workerError;
+			};
 		}
-		
-		myWorker1.onmessage = function(event) {
-			console.log(`Message from the wroker: ${event.data}`);
-			resultText.innerHTML = event.data;
-		};
-		
-		myWorker1.onerror = function(error) {
-			const workerError = `Error Worker1: ${error.message}`;
-			console.log(workerError);
-			resultText.innerHTML = workerError;
-		};
 	});
 
 	startWorker2.addEventListener("click", (event) => {
 		if(typeof(myWorker2) == "undefined") {
 			console.log("Starting wroker2");
 			myWorker2 = new Worker("js/worker2.js");
-		}
 		
-		myWorker2.postMessage('Hello Worker');
+			myWorker2.postMessage('Hello Worker');
 			
-		myWorker2.onmessage = function(message){
-			// console.log(message.data);
-			alert(`The final sum is ${message.data}`)
+			myWorker2.onmessage = function(message){
+				console.log(`Message from Worker: ${message.data}`);
+				alert(`The final sum is ${message.data}`)
+			}
+		
+			myWorker2.onerror = function(error) {
+				const workerError = `Error Worker2: ${error.message}`;
+				console.log(workerError);
+				resultText.innerHTML = workerError;
+			};
 		}
-	
-		myWorker2.onerror = function(error) {
-			const workerError = `Error Worker2: ${error.message}`;
-			console.log(workerError);
-			resultText.innerHTML = workerError;
-		};
 	});
 } else {
 	const noSupportMessage = "Error: Sorry! No Web Worker support.";
@@ -66,11 +66,12 @@ stopWorkers.addEventListener("click", (event) => {
 });
 
 bgButton.addEventListener("click", (event) => {
-	if(document.body.style.background !== "green") {
-		console.log(document.body.style.background);
-		document.body.style.background = "green";
+	myContainer = document.getElementById("myContainer");
+	if(myContainer.style.background !== "green") {
+		console.log(myContainer.style.background);
+		myContainer.style.background = "green";
 	} else {
-		console.log(document.body.style.background);
-		document.body.style.background = "blue";
+		console.log(myContainer.style.background);
+		myContainer.style.background = "blue";
 	}
 });
