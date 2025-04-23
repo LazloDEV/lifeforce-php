@@ -41,19 +41,18 @@ if (!isset($_SESSION['username'])) {
 
 <main class="container">
   <div class="bg-body-tertiary p-5 rounded">
-    <h1>Lifeforce Project v1</h1>
+  <h1>Lifeforce Project v1</h1>
     <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-    <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/5.3/components/navbar/" role="button">Bootstrap 5.3 - Navbar &raquo;</a>
-    <br><br>
+  <p><a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://getbootstrap.com/docs/5.3/components/navbar/">Bootstrap 5.3 - Navbar &raquo;&raquo;</a></p>
+  <br><br>
     <p class="lead">Some documentation for Web Workers.</p>
-    <a class="btn btn-lg btn-primary" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" role="button">Using Web Workers &raquo;</a>
-    <a class="btn btn-lg btn-primary" href="https://www.w3schools.com/html/html5_webworkers.asp" role="button">HTML Web Workers API &raquo;</a>
-    <br><br>
+  <p><a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers">Using Web Workers &raquo;&raquo;</a></p>
+  <p><a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.w3schools.com/html/html5_webworkers.asp">HTML Web Workers API &raquo;&raquo;</a></p>
+  <br><br>
     <p class="lead">Some documentation for Canvas.</p>
-    <a class="btn btn-lg btn-primary" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage" role="button">Basic Usage &raquo;</a>
-    <a class="btn btn-lg btn-primary" href="https://joshondesign.com/p/books/canvasdeepdive/toc.html" role="button">HTML Canvas Deep Dive &raquo;</a>
-    
-    <br><br>
+  <p><a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">Basic Usage &raquo;&raquo;</a></p>
+  <p><a href="#" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://joshondesign.com/p/books/canvasdeepdive/toc.html">HTML Canvas Deep Dive &raquo;&raquo;</a></p>
+  <br><br>
     <ul class="list-group">
       <li class="list-group-item">Enable Boostrap 5 Navbar</li>
       <li class="list-group-item">Create a Favicon</li>
