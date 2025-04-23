@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
 <?php include 'header.php'; ?>
 <?php include 'themeSelector.php'; ?>
     
@@ -25,6 +32,9 @@
           <a class="nav-link disabled" aria-disabled="true">Animation</a>
         </li>
       </ul>
+      <form class="d-flex" role="search" action="logout.php" method="GET">
+        <button class="btn btn-outline-success" type="submit">Log out</button>
+      </form>
     </div>
   </div>
 </nav>
